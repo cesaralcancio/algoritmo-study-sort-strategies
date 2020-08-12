@@ -1,5 +1,5 @@
-# algoritmos
-Algoritmos Alura
+# Algoritmos
+Algoritmos Alura, revendo o curso de estrutura de dados, depois que estava fazeendo o curso de Clojure Funcional :) 
 
 ## Big Notation (O-Grande)
 Image with the Big Notation from Wikipedia:
