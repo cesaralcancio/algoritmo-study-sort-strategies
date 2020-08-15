@@ -63,13 +63,13 @@ public class InsertAndSelectSoftMain {
         imprime(valores);
     }
 
-    private static Integer selecionaMenor(Integer[] valores, Integer posicaoAtual) {
+    private static Integer selecionaMenor(Integer[] valores, Integer posicaoPraComecar) {
         //Pra cada posicao de "valores", verificar a direita se tem um menor
         //Se tiver um menor, troca de posicao com o posicaoAtual de "valores".
-        Integer posicaoMenor = posicaoAtual;
-        Integer menor = valores[posicaoAtual];
+        Integer posicaoMenor = posicaoPraComecar;
+        Integer menor = valores[posicaoPraComecar];
 
-        for(int j = posicaoAtual; j < valores.length; j++) {
+        for(int j = posicaoPraComecar; j < valores.length; j++) {
             int possivelMenor = valores[j];
 
             if (possivelMenor < menor) {
