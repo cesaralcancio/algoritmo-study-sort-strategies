@@ -1,6 +1,7 @@
 package com.cesar.v3;
 
 import java.util.*;
+import java.util.jar.*;
 
 public class QuickSortPivo {
 
@@ -18,7 +19,40 @@ public class QuickSortPivo {
         };
 
         ordena(notas, 0, notas.length);
+        int encontrado = buscaBinaria(notas, 0, notas.length, 6.7);
+        int encontradoLinear = buscaLinear(notas, 0, notas.length, 6.7);
+        System.out.println(encontrado);
+        System.out.println(encontradoLinear);
         System.out.println(Arrays.asList(notas));
+    }
+
+    private static int buscaBinaria(Nota[] notas, int de, int ate, double busca) {
+        int meio = (de + ate) / 2;
+        System.out.println("Buscando " + busca + " de " + de  + " ate " + ate + " e o meio é " + meio);
+        Nota notaDoMeio = notas[meio];
+
+        if (notaDoMeio.getValor() == busca) {
+            return meio;
+        } else if (de != 0 || ate != 0) {
+            if (busca < notaDoMeio.getValor()) {
+                return buscaBinaria(notas, de, meio - 1, busca);
+            } else {
+                return buscaBinaria(notas, meio + 1, ate, busca);
+            }
+        }
+
+        return -1;
+    }
+
+    private static int buscaLinear(Nota[] notas, int de, int ate, double busca) {
+        for(int atual = de; atual < ate; atual++) {
+            System.out.println("Buscando " + busca + "em posicao " + atual);
+            if(notas[atual].getValor() == busca) {
+                return atual;
+            }
+        }
+
+        return -1;
     }
 
     private static void ordena(Nota[] notas, int de, int ate) {
