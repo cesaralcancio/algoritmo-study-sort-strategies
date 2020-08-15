@@ -2,7 +2,7 @@ package com.cesar.v3;
 
 import java.util.*;
 
-public class Pivo {
+public class QuickSortPivo {
 
     public static void main(String[] args) {
         Nota[] notas = {
