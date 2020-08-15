@@ -42,9 +42,14 @@ ele apenas altera quando a gente dobra a quantidade de elementos. Por exemplo:
 31 elementos = 4 comparacoes
 32 elementos = 5 comparacoes
 ```
-Ou seja, o comportamento é: 2^comparacoes=numero de elementos 
+Ou seja, o comportamento é: 2^comparacoes=numero de elementos.
 Como ja sabemos o numero de elementos e queremos descobrir o numero de comparacoes,
 Utilizamos o log(numero de elementos) base 2.
+
+Por exemplo, 2^10=1024. Ou log(1024, 2) = 10.
+Onde 1024 e o numero de elementos e 10 o numero de comparacoes.
+
+
 
 
 
